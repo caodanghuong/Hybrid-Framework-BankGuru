@@ -1,4 +1,4 @@
-package pageObjects;
+package pageObjects.BankGuru;
 
 public class HomePageObject {
 

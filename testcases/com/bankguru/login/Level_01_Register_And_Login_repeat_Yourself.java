@@ -1,4 +1,4 @@
-package com.bankguru.payment;
+package com.bankguru.login;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
@@ -34,7 +34,6 @@ public class Level_01_Register_And_Login_repeat_Yourself {
 	  driver.findElement(By.xpath("//input[@name='btnLogin']")).click();
 	  username =  driver.findElement(By.xpath("//td[text()='User ID :']/following-sibling::td")).getText();
 	  password = driver.findElement(By.xpath("//td[text()='Password :']/following-sibling::td")).getText();
-	  
 	  
   }
   
