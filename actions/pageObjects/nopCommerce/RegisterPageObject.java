@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import commons.BasePage;
 import pageUIs.nopCommerce.RegisterPageUI;
 
+
 public class RegisterPageObject extends BasePage{
 	
 	private WebDriver driver;
@@ -48,6 +49,7 @@ public class RegisterPageObject extends BasePage{
 	public void clickToRegisterButton() {
 		waitForElementClickable(driver, RegisterPageUI.REGISTER_BUTTON);
 		clickToElement(driver, RegisterPageUI.REGISTER_BUTTON);
+
 	}
 
 	public boolean isSuccessMessageDisplayed() {
@@ -55,9 +57,10 @@ public class RegisterPageObject extends BasePage{
 		return isElementDisplayed(driver, RegisterPageUI.SUCCESS_MESSAGE);
 	}
 
-	public void clickToLogoutLink() {
+	public HomePageObject clickToLogoutLink() {
 		waitForElementClickable(driver, RegisterPageUI.LOGOUT_LINK);
 		clickToElement(driver, RegisterPageUI.LOGOUT_LINK);
+		return PageGeneratorManager.getHomePage(driver);
 		
 	}
 

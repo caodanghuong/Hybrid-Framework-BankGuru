@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Live Guru">
+  <parameter name="url" value="http://live.demoguru99.com/index.php/" />
+
+  <test name="Run on FIREFOX">
+  <parameter name="browser" value="firefox" />
+    <classes>
+      <class name="com.LiveGuru.Login.Level_04_Register_Login_Mutilple_Browser"/>
+    </classes>
+  </test>
+  
+</suite> 
