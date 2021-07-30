@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite parallel="false" name="Nop Commerce">
+<suite parallel="false" name="User - Nop Commerce">
   <parameter name="url" value="https://demo.nopcommerce.com/" />
 
   <test name="Run on FIREFOX">
   <parameter name="browser" value="firefox" />
     <classes>
-      <class name="com.nopcommerce.Level_06_Register_Login_Page_Generator"/>
+      <class name="com.nopcommerce.Level_13_Register_Login_Log_Report"/>
     </classes>
   </test>
   

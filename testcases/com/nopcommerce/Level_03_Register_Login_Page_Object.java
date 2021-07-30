@@ -3,9 +3,9 @@ package com.nopcommerce;
 import org.testng.annotations.Test;
 
 import commons.BasePage;
-import pageObjects.nopCommerce.HomePageObject;
-import pageObjects.nopCommerce.LoginPageObject;
-import pageObjects.nopCommerce.RegisterPageObject;
+import pageObjects.user.nopCommerce.HomePageObject;
+import pageObjects.user.nopCommerce.LoginPageObject;
+import pageObjects.user.nopCommerce.RegisterPageObject;
 
 import org.testng.annotations.BeforeClass;
 

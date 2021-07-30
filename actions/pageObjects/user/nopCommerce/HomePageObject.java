@@ -1,9 +1,9 @@
-package pageObjects.nopCommerce;
+package pageObjects.user.nopCommerce;
 
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
-import pageUIs.nopCommerce.HomePageUI;
+import pageUIs.user.nopCommerce.HomePageUI;
 
 public class HomePageObject extends BasePage{
 	private WebDriver driver;
@@ -31,5 +31,10 @@ public class HomePageObject extends BasePage{
 		return PageGeneratorManager.getLoginPage(driver);
 		
 	}
+//	public SearchPageObject openSearchPage() {
+	//	waitForElementClickable(driver, HomePageUI.SEARCH_PAGE_FOOTER);
+	///	clickToElement(driver, HomePageUI.SEARCH_PAGE_FOOTER);
+	//	return PageGeneratorManager.getsearchPage(driver);
+	//}
 
 }

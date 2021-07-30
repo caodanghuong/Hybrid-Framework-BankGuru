@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Facebook">
+  <parameter name="url" value="https://www.facebook.com/r.php" />
+
+  <test name="Run on FIREFOX">
+  <parameter name="browser" value="firefox" />
+    <classes>
+      <class name="com.Facebook.Register.Level_11_Register_Login_Element_Undisplayed"/>
+    </classes>
+  </test>
+  
+</suite> 

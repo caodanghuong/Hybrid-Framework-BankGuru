@@ -23,7 +23,7 @@ import org.openqa.selenium.WebDriver;
 
 import org.testng.Assert;
 
-public class Level_07_Register_Login_Page_Switch_Page  extends BaseTest {
+public class Level_08_Register_Login_Page_Dynamic_Locator  extends BaseTest {
 	WebDriver driver;
 	String emailAddress, password;
 
@@ -81,23 +81,44 @@ public class Level_07_Register_Login_Page_Switch_Page  extends BaseTest {
   @Test
   public void Login_03_Sưitch_Page_At_Footer() {
 	  //Home Page --> Search Page
-	  searchPage = homePage.openSearchPage(driver);
+	  searchPage = (SearchPageObject) homePage.getFooterPageByName(driver, "Search");
 	  
 	  //Search Page --> My Account Page 
-	  myAccountPage = searchPage.openMyAccountPage(driver);
+	  myAccountPage = (MyAccountPageObject) searchPage.getFooterPageByName(driver, "My account");
+	  
 	  
 	  
 	  // My Account Page --> Order Page 
-	  orderPage = myAccountPage.openOrderPage(driver);
+	  orderPage = (OrderPageObject) myAccountPage.getFooterPageByName(driver, "Orders");
 	  
 	  
 	  
 	  // Order Page --> My Account Page 
-	  myAccountPage = orderPage.openMyAccountPage(driver);
+	  myAccountPage = (MyAccountPageObject) orderPage.getFooterPageByName(driver, "My account");
 	  
 	  // My Account Page --> Search Page
 	  
-	  searchPage = myAccountPage.openSearchPage(driver);
+	  searchPage = (SearchPageObject) myAccountPage.getFooterPageByName(driver, "Search");
+	  
+	  
+	  // Search --> Order
+	  orderPage = (OrderPageObject) searchPage.getFooterPageByName(driver, "Orders");
+	  
+  }
+  
+  @Test
+  public void Login_04_Sưitch_Page_At_Footer() {
+
+	  // Order Page --> My Account Page 
+	  orderPage.openFooterPageByName(driver, "My account");
+	  myAccountPage = PageGeneratorManager.getMyAccountPage(driver);
+	  // My Account Page --> Search Page
+	  myAccountPage.openFooterPageByName(driver, "Search");
+	  searchPage = PageGeneratorManager.getsearchPage(driver);
+	  
+	  // Search --> Order
+	  searchPage.openFooterPageByName(driver, "Orders");
+	  orderPage = PageGeneratorManager.getOrderPage(driver);
 	  
   }
 
